@@ -1,5 +1,5 @@
 ---
-title: "CV"
+title: "Chris Dun"
 date: 2018-02-13T11:17:03Z
 slug: "cv"
 ---
