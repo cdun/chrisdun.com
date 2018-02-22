@@ -110,8 +110,6 @@ Grew from 10 orders/day to ~450 orders a day at peak with 7 figure turnover. Sev
 - Swift
 - C++
 - C#
-- Javascript (ES5/6) 
-
 
 ## TECHNOLOGY / WEB
 
@@ -121,6 +119,7 @@ Grew from 10 orders/day to ~450 orders a day at peak with 7 figure turnover. Sev
 - Golang
 - Laravel / Symfony
 - Magento / Shopify
+- Javascript (ES5/6/7)
 - Angular (1/2/4)
 - Backbone JS
 - ThreeJS
