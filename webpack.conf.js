@@ -31,9 +31,9 @@ export default {
     new webpack.ProvidePlugin({
       'THREE': 'three'
     }),
-    // new UglifyPlugin({
+    new UglifyPlugin({
 
-    // })
+    })
   ],
 
   context: path.join(__dirname, "src"),

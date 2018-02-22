@@ -1,11 +1,36 @@
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');/*
+/*
   Define your resets here or use something like Normalize.css if you like
- */html,
+ */
+
+html,
 body{
   margin: 0;
   padding: 0;
-}body {
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: 'swap';
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4AMP6lQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: 'swap';
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
   font-family: sans-serif;
   font-size: 1em;
   background-color: #394020;
@@ -13,53 +38,91 @@ body{
   font-family: 'Roboto', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.75em;
   font-weight: 300;
-}body.cv {
+}
+
+body.cv {
   background-color: #f3f3f3;
   color: #232323;
-}main {
+}
+
+main {
   margin: 0 auto;
   max-width: 960px;
   padding: 0 1.5em;
-}footer {
+}
+
+footer {
   padding: 1.5em 0;
-}strong {
+}
+
+strong {
   font-weight: 700;
-}h1 { 
+}
+
+h1 { 
   text-transform: uppercase;
   font-size: 2.5em;
-}.home h1 {
+}
+
+.home h1 {
   line-height: 1em;
-}.cv h1 {
+}
+
+.cv h1 {
   margin: 2em 0 0;
-}h1, h2, h3, h4, h5, h6 {
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
-}h2 {
+}
+
+h2 {
   margin: 1.25em 0;
   font-size: 1.85em;
-}h3 {
+}
+
+h3 {
   margin: 2.5em 0 0;
   font-size: 1.5em;
-}h4, p {
+}
+
+h4, p {
   margin: 0.75em 0 0;
-}a {
+}
+
+a {
   text-decoration: none;
   color: inherit;
-}a:hover {
+}
+
+a:hover {
   text-decoration: underline;
-}.cv h4 {
+}
+
+.cv h4 {
   clear: left;
-}.cv blockquote {
+}
+
+.cv blockquote {
   margin: 1.5em 0 0;
   font-style: italic;
-}.cv figure {
+}
+
+.cv figure {
   margin: 2em 0 0.5em;
-}.cv img.landscape {
+}
+
+.cv img.landscape {
   max-width: 64px;
   height: auto;
-}.cv img.portrait {
+}
+
+.cv img.portrait {
   max-height: 64px;
   width: auto;
-}@media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
   .cv h4 > strong {
     display: block;
   }
