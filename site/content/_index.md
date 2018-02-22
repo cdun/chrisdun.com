@@ -32,7 +32,7 @@ Senior software engineer working within the augmented and virtual reality sector
 ## EMPLOYMENT
 
 ### **HEAD OF DIGITAL** / [ENGINE CREATIVE](https://www.enginecreative.co.uk/) (2013 - PRESENT)
-My role at Engine is varied - I'm involved in the full lifecycle of all digital projects that run through the studio from new business enquiries, through their implementation and ongoing support. I find it particularly rewarding to be able to bring both our creative team and the business needs of our clients together to either make a process easier or to allow them to innovate within their respective sectors. I also pride myself on my ability to explain otherwise techical subject matter in plain English to stakeholders regardless of their involvement or position.
+My role at Engine is varied - I'm involved in the full lifecycle of all digital projects that run through the studio from new business enquiries, through their implementation and ongoing support. I find it particularly rewarding to be able to bring both our creative team and the business needs of our clients together to either make a process easier or to allow them to innovate within their respective sectors. I also pride myself on my ability to explain techical subject matter in plain English to stakeholders regardless of their involvement or position.
 
 Approximately 75-80% of my time is still writing code (something I'm very grateful for), with a typical day likely calling for a wide range of my skillset. I have had the pleasure of working in a diverse range of scenarios whilst at Engine mentoring other developers in house, providing support in consulting roles to larger development teams and managing exernal freelance resource.
 
