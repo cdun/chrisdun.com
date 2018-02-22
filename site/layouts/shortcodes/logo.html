@@ -1,0 +1,8 @@
+{{ $image := .Page.Resources.GetMatch (.Get "name") }}
+<figure>
+    {{ if gt $image.Height $image.Width }}
+        <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" class="portrait" />
+    {{ else }}
+        <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" class="landscape" />
+    {{ end }}
+</figure>

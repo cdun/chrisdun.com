@@ -53,9 +53,12 @@ body{
   font-style: italic;
 }.cv figure {
   margin: 2em 0 0.5em;
-}.cv img {
+}.cv img.landscape {
   max-width: 64px;
+  height: auto;
+}.cv img.portrait {
   max-height: 64px;
+  width: auto;
 }@media (max-width: 480px) {
   .cv h4 > strong {
     display: block;
