@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
+    "gulp-real-favicon": "^0.2.2",
     "uglifyjs-webpack-plugin": "^1.1.8"
   }
 }

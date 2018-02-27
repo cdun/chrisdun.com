@@ -10,6 +10,9 @@ import BrowserSync from "browser-sync";
 import watch from "gulp-watch";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
+import realFavicon from "gulp-real-favicon";
+import fs from "fs";
+import path from "path";
 
 const browserSync = BrowserSync.create();
 
@@ -22,7 +25,7 @@ gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, hugoArgsPreview));
 
 // Build/production tasks
-gulp.task("build", ["css", "js", "fonts"], (cb) => buildSite(cb, [], "production"));
+gulp.task("build", ["css", "js", "fonts", "favicon"], (cb) => buildSite(cb, [], "production"));
 gulp.task("build-preview", ["css", "js", "fonts"], (cb) => buildSite(cb, hugoArgsPreview, "production"));
 
 // Compile CSS with PostCSS
@@ -55,6 +58,75 @@ gulp.task('fonts', () => (
     .pipe(gulp.dest("./dist/fonts"))
     .pipe(browserSync.stream())
 ));
+
+gulp.task('favicon', (cb) => {
+  realFavicon.generateFavicon({
+		masterPicture: path.resolve(__dirname + "/src/img/favicon_512.png"),
+		dest: path.resolve(__dirname + "/site/static"),
+		iconsPath: "/",
+		design: {
+			ios: {
+				pictureAspect: 'noChange',
+				assets: {
+					ios6AndPriorIcons: false,
+					ios7AndLaterIcons: false,
+					precomposedIcons: false,
+					declareOnlyDefaultIcon: true
+				}
+			},
+			desktopBrowser: {},
+			windows: {
+				pictureAspect: 'noChange',
+				backgroundColor: '#000000',
+				onConflict: 'override',
+				assets: {
+					windows80Ie10Tile: false,
+					windows10Ie11EdgeTiles: {
+						small: false,
+						medium: true,
+						big: false,
+						rectangle: false
+					}
+				}
+			},
+			androidChrome: {
+				pictureAspect: 'noChange',
+				themeColor: '#ffffff',
+				manifest: {
+					display: 'standalone',
+					orientation: 'notSet',
+					onConflict: 'override',
+					declared: true
+				},
+				assets: {
+					legacyIcon: false,
+					lowResolutionIcons: false
+				}
+			},
+			safariPinnedTab: {
+				pictureAspect: 'blackAndWhite',
+				threshold: 50,
+				themeColor: '#5bbad5'
+			}
+		},
+		settings: {
+			scalingAlgorithm: 'Mitchell',
+			errorOnImageTooSmall: false,
+			readmeFile: false,
+			htmlCodeFile: false,
+			usePathAsIs: false
+		},
+		markupFile: "favicon.json"
+	}, function() {
+		cb();
+	});
+});
+
+gulp.task('inject-favicon-markup', function() {
+	return gulp.src([ 'dist/*.html' ])
+		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync("favicon.json")).favicon.html_code))
+		.pipe(gulp.dest('dist'));
+});
 
 // Development server with browsersync
 gulp.task("server", ["hugo", "css", "js", "fonts"], () => {
