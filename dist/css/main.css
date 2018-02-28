@@ -76,18 +76,19 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
-h2 {
+h3 {
   margin: 1.25em 0;
   font-size: 1.85em;
 }
 
-h3 {
+h4 {
   margin: 2.5em 0 0;
   font-size: 1.5em;
 }
 
-h4, p {
+h2, h5, p {
   margin: 0.75em 0 0;
+  font-size: 1em;
 }
 
 a {
@@ -99,7 +100,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.cv h4 {
+.cv h5 {
   clear: left;
 }
 
@@ -123,7 +124,7 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-  .cv h4 > strong {
+  .cv h5 > strong {
     display: block;
   }
 }
