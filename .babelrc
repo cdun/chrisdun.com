@@ -1,7 +1,11 @@
 {
-  "presets": ["env"],
-  "plugins": [
-    "syntax-object-rest-spread",
-    "transform-object-rest-spread"
-  ]
+  "presets": [
+    "next/babel",
+    "@zeit/next-typescript/babel"
+  ],
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
 }
