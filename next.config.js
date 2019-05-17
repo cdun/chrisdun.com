@@ -1,3 +1,6 @@
+
+
+const { resolve } = require('path');
 const webpack = require('webpack');
 const withTypescript = require("@zeit/next-typescript");
 const withSass = require('@zeit/next-sass');
@@ -9,13 +12,22 @@ const plugins = [withTypescript, withSass];
 
 const config = {
   distDir: '../../build/client/.next',
-  exportPathMap: async function (defaultPathMap) {
-    return {
-      ...defaultPathMap,
-      '/': {page: '/index'},
-      '/product': {page: '/product', query: {store: 'uk', product: "", shade: ""}},
-      '/products': {page: '/products', query: {store: 'uk', product: "", shade: ""}}
-    }
+  webpack(config, options) {
+    // register the common module in webpack
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      include: [resolve(__dirname, 'src/common')],
+      exclude: /node_modules/,
+      use: {
+        ...options.defaultLoaders.babel,
+        options: {
+          ...options.defaultLoaders.babel.options,
+          cwd: __dirname
+        }
+      }
+    });
+
+    return config;
   }
 }
 

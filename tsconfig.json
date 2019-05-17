@@ -9,7 +9,8 @@
     "jsx": "react",
     "moduleResolution": "node",
     "rootDirs": [
-      "src/client"
+      "src/client",
+      "src/common"
     ],
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,

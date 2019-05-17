@@ -1,15 +1,14 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App, { Container, AppComponentContext } from 'next/app';
+import { loadGetInitialProps } from 'next/dist/lib/utils';
 import '../styles/index.scss';
 
 class MyApp extends App {
   
-  static async getInitialProps({ Component, ctx }) {
-    if (Component.getInitialProps) {
-      return await Component.getInitialProps(ctx);
-    }
-
-    return {};
+  static async getInitialProps(appCtx: AppComponentContext) {
+    return {
+      pageProps: await loadGetInitialProps(appCtx.Component, appCtx)
+    };
   }
 
   render() {
