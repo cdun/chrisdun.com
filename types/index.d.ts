@@ -1,5 +1,7 @@
 type EmploymentHistory = Role[];
 
+type RichText = string | string[];
+
 interface Company {
   name: string;
   url?: string;
@@ -16,7 +18,7 @@ interface Commendation {
 interface Role {
   title: string;
   employer: Company;
-  description: string;
+  description: RichText;
   started: string;
   ended: string;
   projects?: Project[];
@@ -25,7 +27,7 @@ interface Role {
 interface Project {
   title: string;
   client?: Company;
-  description: string;
+  description: RichText;
   logo?: string;
   url?: string;
   technologies?: string;

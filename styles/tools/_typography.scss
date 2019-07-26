@@ -1,0 +1,25 @@
+@mixin type-title {
+  margin: 2em 0;
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+@mixin type-subtitle {
+  font-size: 2.25rem;
+  line-height: 1em;
+  font-weight: 800;
+}
+
+@mixin type-heading {
+  font-size: 1.75rem;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+@mixin type-subheading {
+  font-size: 1.25rem;
+  line-height: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+}

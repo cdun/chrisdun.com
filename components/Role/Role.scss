@@ -1,0 +1,10 @@
+@import "~styles/tools/_tools";
+
+.Role {
+  margin: 4rem 0;
+
+  &__employer {
+    display: block;
+    @include type-subheading;
+  }
+}

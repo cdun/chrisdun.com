@@ -1,0 +1,25 @@
+@import "~styles/tools/_tools";
+
+h1 {
+  @include type-title;
+}
+
+h2 {
+  @include type-subtitle;
+}
+
+h3 {
+  @include type-heading;
+}
+
+h4 {
+  @include type-subheading;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
