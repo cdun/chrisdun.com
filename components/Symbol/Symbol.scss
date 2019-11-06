@@ -1,0 +1,24 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Symbol {
+  h1 {
+    margin: 0;
+    margin-left: 1rem;
+  }
+
+  &--animating {
+    .left {
+      animation: fade 2.5s ease-in-out infinite alternate;
+    }
+    .right {
+      animation: fade 2.5s ease-in-out 1.25s infinite alternate;
+    }
+  }
+}

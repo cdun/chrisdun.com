@@ -1,20 +1,19 @@
 import React from 'react';
+import Link from 'next/link';
 
 interface ILink {
   children?: string | JSX.Element | JSX.Element[];
-  to?: string;
+  href?: string;
+  as?: string;
 }
 
-export default ({ to, children }: ILink) => {
-  if (to !== undefined) {
+export default ({ href, as, children }: ILink) => {
+  if (href) {
     return (
-      <a
-        className="Link"
-        href={to}
-      >
-        {children}
-      </a>
-    )
+      <Link href={href} as={as}>
+        <a className="Link">{children}</a>
+      </Link>
+    ) 
   }
 
   return <span className="Link">{children}</span>;

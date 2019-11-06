@@ -5,13 +5,14 @@
   "scripts": {
     "dev": "next",
     "build": "rimraf dist && next build",
-    "export": "next export dist",
+    "export": "next export",
     "start": "next start"
   },
   "author": "Chris Dun",
   "license": "MIT",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "classnames": "^2.2.6",
     "next": "^9.0.2",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",

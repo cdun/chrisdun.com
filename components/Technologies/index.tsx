@@ -13,8 +13,8 @@ export default ({project}: IProps) => {
 
   return (
     <ul className="Technologies">
-    {list.map(item => (
-      <li className="Technology">{item}</li>
+    {list.map((item, idx) => (
+      <li key={idx} className="Technology">{item}</li>
     ))}
     </ul>
   );

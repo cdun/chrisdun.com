@@ -16,6 +16,7 @@ interface Commendation {
 }
 
 interface Role {
+  slug?: string;
   title: string;
   employer: Company;
   description: RichText;

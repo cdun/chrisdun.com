@@ -5,13 +5,14 @@ import './Role.scss';
 
 interface Props {
   children?: JSX.Element[];
+  summarise?: boolean;
   role: Role;
 }
 
-export default ({ children, role }: Props) => (
+export default ({ children, role, summarise = true }: Props) => (
   <article className="Role">
     <h3 className="Role__title">
-      <Link to={role.employer.url}>
+      <Link href="/role/[slug]" as={`/role/${role.slug}`}>
         <>
           {role.title}
           <span className="Role__employer">{role.employer.name}</span>
@@ -19,9 +20,11 @@ export default ({ children, role }: Props) => (
       </Link>
     </h3>
     <div className="Role__dates">{role.started} - {role.ended || 'Present'}</div>
-    <section className="Role__description">
-      <RichText textOrArr={role.description} />
-    </section>
+    {!summarise && (
+      <section className="Role__description">
+        <RichText textOrArr={role.description} />
+      </section>
+    )}
     {children}
   </article>
 )

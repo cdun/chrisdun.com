@@ -12,7 +12,7 @@ export default ({ project }: IProject) => {
   return (
     <section className="Project">
       <h4 className="Project__title">
-        <Link to={project.url}>
+        <Link href={project.url}>
           <>
             {project.title}
             {client && (
