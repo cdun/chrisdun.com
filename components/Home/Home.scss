@@ -1,0 +1,26 @@
+@import "~styles/tools/_tools";
+
+.Home {
+    &__title {
+        @include type-title;
+    }
+    &__subtitle {
+        @include type-subtitle;
+        max-width: 380px;
+    }
+
+    &__roles {
+        @include type-heading;
+    }
+
+    &__role {
+        display: block;
+        
+        &-title {
+            @include type-body;
+        }
+        &-employer {
+            @include type-body;
+        }
+    }
+}

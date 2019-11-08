@@ -1,19 +1,19 @@
 @import "~styles/tools/_tools";
 
 h1 {
-  @include type-title;
+  margin: 0;
 }
 
 h2 {
-  @include type-subtitle;
+  margin: 0;
 }
 
 h3 {
-  @include type-heading;
+  margin: 0;
 }
 
 h4 {
-  @include type-subheading;
+  margin: 0;
 }
 
 a {
@@ -22,4 +22,9 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1rem;
 }

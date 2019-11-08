@@ -23,7 +23,7 @@ export default class RolePage extends PureComponent<IProps> {
     const { slug } = ctx.query;
     const role = getRole(slug as string);
 
-    if ( !role ) {
+    if (!role) {
       Router.replace('/')
     }
 
@@ -36,11 +36,7 @@ export default class RolePage extends PureComponent<IProps> {
     const { role } = this.props;
 
     return (
-      <Role
-        key={role.started}
-        role={role}
-        summarise={false}
-      />
+      <Role role={role} />
     );
   }
 

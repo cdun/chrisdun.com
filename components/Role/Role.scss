@@ -1,8 +1,15 @@
 @import "~styles/tools/_tools";
 
 .Role {
+  &__title {
+    @include type-title;
+  }
+
   &__employer {
-    display: block;
-    @include type-subheading;
+    @include type-subtitle;
+  }
+
+  &__dates, &__projects {
+    @include type-heading;
   }
 }

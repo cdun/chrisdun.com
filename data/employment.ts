@@ -1,7 +1,7 @@
 // tslint:disable:max-line-length
 export default [
   {
-    title: 'Lead Frontend Engineer',
+    title: 'Lead Engineer',
     slug: 'charlotte-tilbury',
     description: [
       'TODO!'
@@ -156,6 +156,7 @@ export default [
   {
     title: 'Developer',
     description: 'The parent company of surf brand Billabong, in the UK GSM trades as Two Seasons - a medium sized fashion retailer with stores around the Midlands. During my time in this role I was sole designer and developer working within an eCommerce team of 5 people.',
+    slug: 'two-seasons',
     employer: {
       name: 'GSM England Retail',
       url: 'https://www.twoseasons.co.uk/'

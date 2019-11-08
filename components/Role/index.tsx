@@ -1,30 +1,36 @@
 import React from 'react';
-import Link from '../Link';
+import Header from '../Header';
+import ProjectList from '../ProjectList';
 import RichText from '../RichText';
 import './Role.scss';
 
 interface Props {
-  children?: JSX.Element[];
-  summarise?: boolean;
   role: Role;
 }
 
-export default ({ children, role, summarise = true }: Props) => (
-  <article className="Role">
-    <h3 className="Role__title">
-      <Link href="/role/[slug]" as={`/role/${role.slug}`}>
-        <>
-          {role.title}
-          <span className="Role__employer">{role.employer.name}</span>
-        </>
-      </Link>
-    </h3>
-    <div className="Role__dates">{role.started} - {role.ended || 'Present'}</div>
-    {!summarise && (
-      <section className="Role__description">
-        <RichText textOrArr={role.description} />
-      </section>
-    )}
-    {children}
-  </article>
-)
+export default ({ role }: Props) => {
+  const { projects = [] } = role;
+
+  return (
+    <>
+      <Header>
+        <div className="Role__title">{role.title}</div>
+        <span className="Role__employer">{role.employer.name}</span>
+        <div className="Role__dates">{role.started} - {role.ended || 'Present'}</div>
+      </Header>
+      
+      <article className="Role">
+        <section className="Role__description">
+          <RichText textOrArr={role.description} />
+        </section>
+
+        {projects.length && (
+          <>
+            <h3 className="Role__projects">Projects</h3>
+            <ProjectList projects={projects} />
+          </>
+        )}
+      </article>
+    </>
+  );
+}

@@ -1,7 +1,8 @@
+@import "~styles/tools/_tools";
+
 html, body {
-  min-height: 100%;
-  color: rgb(55, 62, 74);
-  background-color: rgb(247, 246, 246);
+  color: #333;
+  background-color: rgb(253, 253, 253);
 }
 
 body {
@@ -9,22 +10,14 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.15em;
-  font-family: 'Lato', sans-serif;
+  @include type-body;
   overscroll-behavior-y: contain;
   overflow-x: hidden;
 }
 
 #__next {
+  max-width: 800px;
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-.Header {
-  position: sticky;
-  top: 0;
-  left: 0;
 }

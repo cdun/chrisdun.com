@@ -2,6 +2,7 @@ import React from 'react';
 import RichText from '../RichText';
 import Technologies from '../Technologies';
 import Link from '../Link';
+import './Project.scss';
 
 interface IProject {
   project: Project;
@@ -10,7 +11,7 @@ interface IProject {
 export default ({ project }: IProject) => {
   const { client } = project;
   return (
-    <section className="Project">
+    <aside className="Project">
       <h4 className="Project__title">
         <Link href={project.url}>
           <>
@@ -25,6 +26,6 @@ export default ({ project }: IProject) => {
       <RichText textOrArr={project.description} />
 
       <Technologies project={project} />
-    </section>
+    </aside>
   );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import App, { Container, AppProps } from 'next/app';
 import Head from 'next/head';
-import NamePlate from '../components/NamePlate';
 import Router from 'next/router';
 import '../styles/index.scss';
 
@@ -46,10 +45,9 @@ class MyApp extends App<AppProps, IState> {
         </Head>
         
         <Container>
-          <main className="page">
-            <NamePlate />
+          <div className="page">
             <Component {...pageProps} />
-          </main>
+          </div>
         </Container>
       </>
     );
