@@ -37,7 +37,7 @@
 }
 
 @mixin type-subheading {
-  @include type-body;
+  @include heading;
   font-size: 1.25rem;
   line-height: 1.5em;
   margin-top: 1.5rem;
