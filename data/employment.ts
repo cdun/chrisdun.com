@@ -21,7 +21,7 @@ export default [
       {
         title: 'Makeup AI',
         description: 'In-store Augmented Reality try-on application with machine learning based recommendations based upon facial analysis',
-        technologies: 'Electron, Typescript, React'
+        technologies: 'Electron, Typescript, React, WebGL, Three JS'
       }
     ]
   },
@@ -69,7 +69,7 @@ export default [
             }
           }
         ],
-        technologies: 'Objective C & C++ maintained via private CocoaPods repo. PHP (Laravel) / MySQL, HTML5, SASS, Memcache, Supervisord'
+        technologies: 'Objective C & C++ maintained via private CocoaPods repo. PHP (Laravel) / MySQL, HTML5, SASS, Memcache, Supervisord, PHPUnit'
       },
       {
         title: 'The National Lottery',
