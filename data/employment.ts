@@ -1,30 +1,30 @@
 // tslint:disable:max-line-length
 export default [
-  {
-    title: 'Lead Engineer',
-    slug: 'charlotte-tilbury',
-    description: [
-      'TODO!'
-    ],
-    employer: {
-      name: 'Charlotte Tilbury',
-      url: 'https://www.charlottetilbury.com/'
-    },
-    started: '2018',
-    projects: [
-      {
-        title: 'Website Replatform',
-        url: 'https://www.charlottetilbury.com/',
-        description: 'Greenfield rewrite of high traffic Magento site to headless eCommerce system.',
-        technologies: 'NodeJS, NextJS, Typescript, React, Redux, Java, Spring Boot, Docker, AWS'
-      },
-      {
-        title: 'Makeup AI',
-        description: 'In-store Augmented Reality try-on application with machine learning based recommendations based upon facial analysis',
-        technologies: 'Electron, Typescript, React, WebGL, Three JS'
-      }
-    ]
-  },
+  // {
+  //   title: 'Lead Engineer',
+  //   slug: 'charlotte-tilbury',
+  //   description: [
+  //     'TODO!'
+  //   ],
+  //   employer: {
+  //     name: 'Charlotte Tilbury',
+  //     url: 'https://www.charlottetilbury.com/'
+  //   },
+  //   started: '2018',
+  //   projects: [
+  //     {
+  //       title: 'Website Replatform',
+  //       url: 'https://www.charlottetilbury.com/',
+  //       description: 'Greenfield rewrite of high traffic Magento site to headless eCommerce system.',
+  //       technologies: 'NodeJS, NextJS, Typescript, React, Redux, Java, Spring Boot, Docker, AWS'
+  //     },
+  //     {
+  //       title: 'Makeup AI',
+  //       description: 'In-store Augmented Reality try-on application with machine learning based recommendations based upon facial analysis',
+  //       technologies: 'Electron, Typescript, React, WebGL, Three JS'
+  //     }
+  //   ]
+  // },
   {
     title: 'Head of Digital',
     slug: 'engine-creative',
