@@ -1,5 +1,5 @@
 // tslint:disable:max-line-length
-export default [
+module.exports = [
   // {
   //   title: 'Lead Engineer',
   //   slug: 'charlotte-tilbury',
@@ -175,4 +175,4 @@ export default [
       }
     ]
   }
-] as EmploymentHistory;
+];
