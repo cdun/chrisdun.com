@@ -4,7 +4,7 @@ interface IProps {
   textOrArr: RichText;
 }
 
-export default ({ textOrArr }: IProps) => {
+const RichText = ({ textOrArr }: IProps) => {
   if ( Array.isArray(textOrArr) ) {
     return (
       <>{textOrArr.map((content, idx) => <p key={idx} dangerouslySetInnerHTML={{ __html: content }} />)}</>
@@ -15,3 +15,5 @@ export default ({ textOrArr }: IProps) => {
     <p dangerouslySetInnerHTML={{ __html: textOrArr }} />
   );
 }
+
+export default RichText;

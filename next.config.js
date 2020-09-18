@@ -1,10 +1,7 @@
-
-
 const { resolve } = require('path');
-const withSass = require('@zeit/next-sass');
 const employment = require('./data/employment');
 
-module.exports = withSass({
+module.exports = {
   distDir: 'build/client/.next',
   webpack(config, options) {
     config.resolve.alias = Object.assign(config.resolve.alias, {
@@ -31,4 +28,4 @@ module.exports = withSass({
     //   '/role/two-seasons': { page: '/role/[slug]', query: { slug: 'two-seasons' } },
     // }
   }
-});
+};

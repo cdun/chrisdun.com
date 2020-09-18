@@ -4,7 +4,7 @@ interface IProps {
   project: Project;
 }
 
-export default ({ project }: IProps) => {
+const Technologies = ({ project }: IProps) => {
   if (!project.technologies) {
     return null;
   }
@@ -20,4 +20,6 @@ export default ({ project }: IProps) => {
       ))}
     </ul>
   );
-}
+};
+
+export default Technologies;

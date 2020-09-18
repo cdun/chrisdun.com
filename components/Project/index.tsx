@@ -2,22 +2,22 @@ import React from 'react';
 import RichText from '../RichText';
 import Technologies from '../Technologies';
 import Link from '../Link';
-import './Project.scss';
+import styles from './Project.module.scss';
 
 interface IProject {
   project: Project;
 }
 
-export default ({ project }: IProject) => {
+const Project = ({ project }: IProject) => {
   const { client } = project;
   return (
-    <aside className="Project">
-      <h4 className="Project__title">
+    <aside className={styles.Project}>
+      <h4 className={styles.Project__title}>
         <Link href={project.url}>
           <>
             {project.title}
             {client && (
-              <span className="Project__client"> - {client.name}</span>
+              <span className={styles.Project__client}> - {client.name}</span>
             )}
           </>
         </Link>
@@ -28,4 +28,6 @@ export default ({ project }: IProject) => {
       <Technologies project={project} />
     </aside>
   );
-}
+};
+
+export default Project;

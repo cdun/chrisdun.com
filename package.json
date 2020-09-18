@@ -11,13 +11,12 @@
   "author": "Chris Dun",
   "license": "MIT",
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
     "classnames": "^2.2.6",
-    "next": "^9.3.2",
+    "next": "^9.5.3",
     "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "typescript": "^3.5.3"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^4.0.2"
   },
   "devDependencies": {
     "@types/node": "^12.6.8",

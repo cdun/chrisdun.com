@@ -1,8 +1,8 @@
 import React from 'react';
-import './Header.scss';
+import styles from './Header.module.scss';
 
 const Header: React.FunctionComponent = ({ children }) => (
-    <header className="Header">
+    <header className={styles.header}>
         {children}
     </header>
 );

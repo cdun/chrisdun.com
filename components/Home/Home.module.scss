@@ -16,10 +16,10 @@
     &__role {
         display: block;
         
-        &-title {
+        &_title {
             @include type-body;
         }
-        &-employer {
+        &_employer {
             @include type-body;
         }
     }

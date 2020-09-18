@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Home from './../components/Home';
 
-export default () => (
+const IndexPage = () => (
   <>
     <Head>
       <title>Chris Dun</title>
@@ -10,4 +10,6 @@ export default () => (
 
     <Home />
   </>
-)
+);
+
+export default IndexPage;

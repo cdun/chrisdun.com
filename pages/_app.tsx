@@ -1,5 +1,5 @@
 import React from 'react';
-import App, { Container, AppProps } from 'next/app';
+import App, { AppProps } from 'next/app';
 import Head from 'next/head';
 import Router from 'next/router';
 import '../styles/index.scss';
@@ -36,22 +36,20 @@ class MyApp extends App<AppProps, IState> {
 
   render() {
     const { Component, pageProps } = this.props;
-    
+
 
     return (
       <>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
-        
-        <Container>
-          <div className="page">
-            <Component {...pageProps} />
-          </div>
-        </Container>
+
+        <div className="page">
+          <Component {...pageProps} />
+        </div>
       </>
     );
   }
 }
-    
+
 export default MyApp;

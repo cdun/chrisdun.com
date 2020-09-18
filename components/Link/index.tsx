@@ -9,7 +9,7 @@ interface ILink {
   as?: string;
 }
 
-export default ({ href, as, className, children }: ILink) => {
+const LinkComponent = ({ href, as, className, children }: ILink) => {
   if (href) {
     return (
       <Link href={href} as={as}>
@@ -19,4 +19,6 @@ export default ({ href, as, className, children }: ILink) => {
   }
 
   return <span className="Link">{children}</span>;
-}
+};
+
+export default LinkComponent;
