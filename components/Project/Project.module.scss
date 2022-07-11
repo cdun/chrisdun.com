@@ -1,9 +1,0 @@
-@import "~styles/tools/_tools";
-
-.Project {
-    margin-top: 1.5rem;
-
-    &__title {
-        @include type-subheading;
-    }
-}
