@@ -6,19 +6,19 @@ export default createGlobalStyle`
   }
 
   body {
-    max-width: 50rem;
+    font: 16px/1.6 'Poppins', sans-serif;
+  }
+  
+  main {
+    max-width: 60rem;
     margin: 0 auto;
     padding-top: 5rem;
-    font: 16px/1.6 'Poppins', sans-serif;
-    /* background-color: #fff;
-    background-repeat: repeat-y;
-    background-size: 100% 16px;
-    background-image: linear-gradient(to bottom,#0ff 0,rgba(255,255,255,0) 1px); */
-  }
-  @media screen and (max-width: 50rem) {
-    body {
-      padding-left: 1rem;
-      padding-right: 1rem;
+
+    @media screen and (max-width: 50rem) {
+      body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
     }
   }
   
