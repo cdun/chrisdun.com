@@ -12,7 +12,7 @@ export default createGlobalStyle`
   main {
     max-width: 60rem;
     margin: 0 auto;
-    padding-top: 5rem;
+    padding: 5rem 1rem;
 
     @media screen and (max-width: 50rem) {
       body {
@@ -20,6 +20,14 @@ export default createGlobalStyle`
         padding-right: 1rem;
       }
     }
+  }
+
+  h1 { 
+    @media screen and (max-width: 50rem) {
+    .surname {
+      display: block;
+    }
+  }
   }
   
   h1, h2, h3 {
@@ -43,7 +51,7 @@ export default createGlobalStyle`
 
   h1, .h1 {
     font-size: 4.25rem;
-    line-height: 5.25rem;
+    line-height: 3.3rem;
     margin-top: 1.3125rem;
     margin-bottom: 2.625rem;
   }
