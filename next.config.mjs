@@ -1,21 +1,22 @@
-const { resolve } = require('path');
-const employment = require('./data/employment');
+import { resolve } from 'path';
+import mdx from '@next/mdx';
+import rehypeSlugPlugin from 'rehype-slug';
 
-const withMDX = require('@next/mdx')({
+const withMDX = mdx({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [],
-    rehypePlugins: [],
+    rehypePlugins: [rehypeSlugPlugin],
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },
 });
 
-module.exports = withMDX({
+export default withMDX({
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   webpack(config, options) {
     config.resolve.alias = Object.assign(config.resolve.alias, {
-      'styles': resolve(__dirname, 'styles'),
+      'styles': resolve('styles'),
     });
 
     return config;

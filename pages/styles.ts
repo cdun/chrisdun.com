@@ -21,14 +21,6 @@ export default createGlobalStyle`
       }
     }
   }
-
-  h1 { 
-    @media screen and (max-width: 50rem) {
-    .surname {
-      display: block;
-    }
-  }
-  }
   
   h1, h2, h3 {
     font-weight: 200;
@@ -102,4 +94,10 @@ export default createGlobalStyle`
       font-style: normal;
     }
   }
+
+  @media screen and (max-width: 50rem) {
+      h1 .surname {
+        display: block;
+      }
+    }
 `;
